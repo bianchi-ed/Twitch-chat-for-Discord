@@ -10,7 +10,7 @@ const path = require('node:path');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] })
 client.commands = new Collection()
 
-// Function to load Discord.js commands from commands folder
+// Load Discord.js commands from commands folder
 const loadCommands = (folderPath) => {
 	const commandFolders = fs.readdirSync(folderPath)
   	for (const folder of commandFolders) {
@@ -29,7 +29,7 @@ const loadCommands = (folderPath) => {
   	}
 };
 
-// Function to load Discord.js events from events folder
+// Load Discord.js events from events folder
 const loadEvents = (folderPath) => {
 	const eventFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'))
 	for (const file of eventFiles) {
