@@ -1,10 +1,9 @@
 //Imports
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
-const twitchJsClient = require('./twitchIRC/twitch.js');
+const { token, targetChannel } = require('./config.json');
+const eventEmitter = require('./eventHandler');
 const fs = require('node:fs');
 const path = require('node:path');
-
 
 // Instance Discord BOT
 const client = new Client({ intents: [GatewayIntentBits.Guilds] })
@@ -43,13 +42,24 @@ const loadEvents = (folderPath) => {
   	}
 };
 
-// Try loading commands, events and connect discord bot to the server
-(async () => {
-	try {
-		loadCommands(path.join(__dirname, 'commands'));
-		loadEvents(path.join(__dirname, 'events'));
-		await client.login(token);
-	} catch (error) {
-		console.error('An error occurred:', error);
+// Listen for twitchMessage event
+eventEmitter.on('twitchMessage', (messageContent) => {
+	const channel = client.channels.cache.find((c) => c.name === targetChannel);
+	
+	if (channel) {
+	  channel.send(`${messageContent}`);
 	}
-})();
+});
+
+// Try loading commands, events and connect discord bot to discord server
+if (require.main === module) {
+	(async () => {
+		try {
+			loadCommands(path.join(__dirname, 'commands'));
+			loadEvents(path.join(__dirname, 'events'));
+			await client.login(token);
+		} catch (error) {
+			console.error('An error occurred:', error);
+		}
+	})();
+}
