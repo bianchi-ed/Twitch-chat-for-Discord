@@ -16,7 +16,7 @@ twitchJsClient.on('ready', () => {
 // Message Event
 twitchJsClient.on('message', async (msg) => {
 
-	// Keep Alive
+	// Keep alive for IRC
 	if (msg.content === 'ping') {
 		msg.channel.send('pong');
 	}

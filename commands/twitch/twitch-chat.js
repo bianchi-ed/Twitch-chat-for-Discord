@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, ChannelType } = require('discord.js');
 const twitchJsClient = require('../../twitch.js');
-const { twitchUserToken, targetChannel, discordServerCategoryID } = require('../../config.json');
+const { twitchUserToken, targetChannel } = require('../../config.json');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -8,11 +8,11 @@ module.exports = {
     .setDescription('Start monitoring target twitch channel chat'),
   async execute(interaction) {
 
-    // Get Guild and check if target channel already exists
-    const guild = interaction.guild;
-    const existingChannel = guild.channels.cache.find(channel => channel.name === targetChannel);
+    // Check if target channel already exists
+    const existingChannel = interaction.guild.channels.cache.find(channel => channel.name === targetChannel);
     
     if (existingChannel) {
+
       // Log in to the IRC chat using twitch user token
       twitchJsClient.login(twitchUserToken);
       return interaction.reply(`Connected to Twitch IRC Channel #${targetChannel}.`);
