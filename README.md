@@ -28,17 +28,23 @@ Create a file named config.json on the root folder and populate with the followi
 	"discordChannel": "discord channel ID that will be used to receive twitch chat messages"
 }
 ```
+
+These are necessary for the discord.js application:
+
 [token](https://i.imgur.com/grBBTIy.png): You can obtain your bot token by navigating to the "Bot" tab in your Discord application settings. 
 
 [clientId](https://i.imgur.com/u67WoGq.png): Find your Discord application ID in the "General Information" tab of your Discord application settings. 
 
 [guildId](https://i.imgur.com/qKGsMnX.mp4): Copy your Discord server ID by right-clicking on your server name and selecting "Copy Server ID."
 
+[discordChannel](https://i.imgur.com/6fSVSN1.mp4): Provide the Discord server channel ID by right-clicking on your desired channel name and selecting "Copy Channel ID."
+
+These are necessary for the twitch.js application:
+
 [twitchUserToken](https://twitchapps.com/tmi/): Get your Twitch user token by logging in here. It should look like "oauth:xXxXXx."
 
 [targetChannel](https://i.imgur.com/UjIKXM1): Specify the target Twitch channel name.
 
-[discordChannel](https://i.imgur.com/6fSVSN1.mp4): Provide the Discord server channel ID by right-clicking on your desired channel name and selecting "Copy Channel ID."
 
 ### 3. Run
 
