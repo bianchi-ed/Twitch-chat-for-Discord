@@ -21,8 +21,8 @@ Create a file named config.json on the root folder and populate with the followi
 	"clientId": "Your discord application ID goes here",
 	"guildId": "This is your Discord server ID",
 	"twitchUserToken": "User token for twitch IRC connection",
-	"targetChannel" :"Twitch channel name",
-	"discordChannel" :"discord channel ID that will be used to receive twitch chat messages"
+	"targetChannel": "Twitch channel name",
+	"discordChannel": "discord channel ID that will be used to receive twitch chat messages"
 }
 ```
 [token](https://i.imgur.com/grBBTIy.png) -> You can get your bot token by entering the specific discord application and navigating to the "Bot" tab. 
