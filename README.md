@@ -37,7 +37,7 @@ Create a file named config.json on the root folder and populate with the followi
 
 [discordChannel](https://i.imgur.com/6fSVSN1.mp4) -> Discord server channel ID. You can get this ID by right clicking your desired channel name and click "Copy Channel ID".
 
-### 3. Run project
+### 3. Run
 
 ```bash
 #Run the command on project's root folder
