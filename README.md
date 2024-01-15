@@ -13,7 +13,7 @@ $ npm install
 
 ### 2. Configure config.json
 
-Create a file named config.json on the root folder and provide the following information:
+Create a file named config.json on the root folder and populate with the following information:
 
 ```json
 {	
