@@ -64,7 +64,7 @@ twitchJsClient.on('message', async (msg) => {
 
   //Send twitch chat message to discord channel
   const channel = discordClient.channels.cache.get(discordChannel);
-  channel.send(msg.author.displayName + ": " + msg.content)
+  channel.send("**" + msg.author.displayName + "**" + ": " + msg.content)
 });
 
 // Discord.js login and load commands/events
