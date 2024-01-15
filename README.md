@@ -48,7 +48,7 @@ Create a file named config.json on the root folder and populate with the followi
 
 [twitchUserToken](https://twitchapps.com/tmi/): Get your Twitch user token by logging in here. It should look like "oauth:xXxXXx."
 
-[targetChannel](https://i.imgur.com/UjIKXM1): Specify the target Twitch channel name.
+[targetChannel](https://i.imgur.com/UjIKXM1.png): Specify the target Twitch channel name.
 
 
 ### 3. Run
@@ -59,11 +59,11 @@ Create a file named config.json on the root folder and populate with the followi
 $ node index.js
 ```
 
-If everything goes as expected you should be receiving messages from twitch's chat on target discord channel, as showed here:
+If everything goes as expected you should be receiving messages from twitch's chat on target discord channel:
 
 ![image](https://github.com/bianchi-ed/Twitch-chat-for-Discord/assets/134458207/04d5dd92-9a5f-4af3-960f-a395ca0b8a05)
 
-Also, the twitch chat messages will be printed on the terminal, as showed here:
+Also, the twitch chat messages will be printed on the terminal:
 
 ![image](https://github.com/bianchi-ed/Twitch-chat-for-Discord/assets/134458207/fac5cf36-1a66-461f-87f1-4531a9fda57e)
 
