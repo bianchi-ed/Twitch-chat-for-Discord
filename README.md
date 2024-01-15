@@ -1,4 +1,4 @@
-Node.js project containing a single method to get Twitch's API Access Token.
+THIS IS A WORK IN PROGRESS
 
 
 ## How to use
