@@ -14,35 +14,62 @@ const twitchJsClient = new TwitchClient({
 
 discordClient.commands = new Collection();
 
-// Load Discord.js commands from commands folder
 const loadCommands = (folderPath) => {
-  const commandFolders = fs.readdirSync(folderPath);
-  for (const folder of commandFolders) {
-    const commandsPath = path.join(folderPath, folder);
-    const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-    for (const file of commandFiles) {
-      const filePath = path.join(commandsPath, file);
-      const command = require(filePath);
-      if ('data' in command && 'execute' in command) {
-        discordClient.commands.set(command.data.name, command);
-      } else {
-        console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
+  try {
+    if (!fs.existsSync(folderPath)) {
+      console.error(`[ERROR] Commands directory '${folderPath}' not found.`);
+      return;
+    }
+
+    const commandFolders = fs.readdirSync(folderPath);
+    for (const folder of commandFolders) {
+      const commandsPath = path.join(folderPath, folder);
+
+      if (!fs.existsSync(commandsPath) || !fs.lstatSync(commandsPath).isDirectory()) {
+        console.error(`[ERROR] Commands subdirectory '${commandsPath}' not found.`);
+        continue;
+      }
+
+      const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+      for (const file of commandFiles) {
+        const filePath = path.join(commandsPath, file);
+
+        try {
+          const command = require(filePath);
+          if ('data' in command && 'execute' in command) {
+            discordClient.commands.set(command.data.name, command);
+          } else {
+            console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
+          }
+        } catch (error) {
+          console.error(`[ERROR] Error loading command from file ${filePath}:`, error);
+        }
       }
     }
+  } catch (error) {
+    console.error('[ERROR] An error occurred while loading commands:', error);
   }
 };
 
-// Load Discord.js events from events folder
 const loadEvents = (folderPath) => {
-  const eventFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'));
-  for (const file of eventFiles) {
-    const filePath = path.join(folderPath, file);
-    const event = require(filePath);
-    if (event.once) {
-      discordClient.once(event.name, (...args) => event.execute(...args, discordClient));
-    } else {
-      discordClient.on(event.name, (...args) => event.execute(...args, discordClient));
+  try {
+    const eventFiles = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'));
+    for (const file of eventFiles) {
+      const filePath = path.join(folderPath, file);
+
+      try {
+        const event = require(filePath);
+        if (event.once) {
+          discordClient.once(event.name, (...args) => event.execute(...args, discordClient));
+        } else {
+          discordClient.on(event.name, (...args) => event.execute(...args, discordClient));
+        }
+      } catch (error) {
+        console.error(`[ERROR] Error loading event from file ${filePath}:`, error);
+      }
     }
+  } catch (error) {
+    console.error('[ERROR] An error occurred while loading events:', error);
   }
 };
   
