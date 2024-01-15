@@ -38,7 +38,7 @@ Create a file named config.json on the root folder and populate with the followi
 
 [guildId](https://i.imgur.com/qKGsMnX.mp4): Copy your Discord server ID by right-clicking on your server name and selecting "Copy Server ID."
 
-[discordChannel](https://i.imgur.com/6fSVSN1.mp4): Provide the Discord server channel ID by right-clicking on your desired channel name and selecting "Copy Channel ID."
+[discordChannel](https://i.imgur.com/6fSVSN1.mp4): Provide the Discord server channel ID that will receive twitch messages by right-clicking on your desired channel name and selecting "Copy Channel ID."
 
 
 **Necessary for the twitch.js application:**
