@@ -7,6 +7,11 @@ const path = require('node:path');
 // Instance discord.js client
 const discordClient = new Client({ intents: [GatewayIntentBits.Guilds] });
 
+// Instance twitch.js client
+const twitchJsClient = new TwitchClient({
+  channels: [targetChannel],
+});
+
 discordClient.commands = new Collection();
 
 // Load Discord.js commands from commands folder
@@ -40,11 +45,6 @@ const loadEvents = (folderPath) => {
     }
   }
 };
-
-// Instance twitch.js client
-const twitchJsClient = new TwitchClient({
-    channels: [targetChannel],
-});
   
 // Twitch.js ready event
 twitchJsClient.on('ready', () => {
