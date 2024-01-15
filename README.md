@@ -4,7 +4,7 @@ This project uses Node.js alongside two libraries: Discord.js and Twitch.js. Its
 
 The discord.js part of this project is built using Discord.js v14 and the codebase is designed to be easily extensible, allowing for addition of new commands and events in separated files as needed.
 
-Future developments will explore the Twitch API, aiming to incorporating features. The primary goal is to create an interface on Discord that facilitates direct communication with Twitch chat and interactions with the Twitch API, integrating these elements into the Discord server. I also plan to create a better structure in general for the project. 
+Future developments will explore the Twitch API, aiming to incorporating features. The primary goal is to create an interface on Discord tha communicates with Twitch chat and interacts with Twitch API, integrating these elements into the Discord server. I also plan to create a better structure in general for the project. 
 
 ## How to use
 
