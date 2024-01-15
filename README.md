@@ -25,15 +25,17 @@ Create a file named config.json on the root folder and populate with the followi
 	"discordChannel" : "discord channel ID that will be used to receive twitch chat messages"
 }
 ```
-[token](https://twitchapps.com/tmi/)
-[clientId](https://twitchapps.com/tmi/)
+[token](https://i.imgur.com/grBBTIy.png) -> You can get your bot token by entering the specific discord application and navigating to the "Bot" tab. 
 
-[guildId](https://twitchapps.com/tmi/) -> Discord server ID. You can get this ID by right clicking your discord server name and click "Copy Server ID":
-https://imgur.com/a/vSkt1Ul
+[clientId](https://i.imgur.com/u67WoGq.png) -> You can get your bot token by entering the specific discord application and navigating to the "General information" tab. 
+
+[guildId](https://i.imgur.com/qKGsMnX.mp4) -> Discord server ID. You can get this ID by right clicking your discord server name and click "Copy Server ID".
 
 [twitchUserToken](https://twitchapps.com/tmi/) -> Acess, log in and get your token. It looks like "oauth:xXxXXx"
-[targetChannel](https://twitchapps.com/tmi/) -> Target twitch channel name
-[discordChannel](https://twitchapps.com/tmi/) -> Discord channel ID that will receive the IRC twitch channel messages. 
+
+[targetChannel](https://i.imgur.com/UjIKXM1) -> Target twitch channel name
+
+[discordChannel](https://i.imgur.com/6fSVSN1.mp4) -> Discord channel ID that will receive the IRC twitch channel messages. 
 
 ### 3. Run project
 
