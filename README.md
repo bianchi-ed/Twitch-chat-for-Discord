@@ -16,7 +16,6 @@ $ npm install
 Create a file named config.json on the root folder and provide the following information:
 
 ```json
-#Run the command on project's root folder
 {	
 	"token": "",
 	"clientId": "",
