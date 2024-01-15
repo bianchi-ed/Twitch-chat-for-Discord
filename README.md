@@ -22,12 +22,12 @@ Create a file named config.json on the root folder and populate with the followi
 
 ```json
 {	
-	"token": "Your discord bot token goes here",
-	"clientId": "Your discord application ID goes here",
-	"guildId": "This is your Discord server ID",
-	"twitchUserToken": "User token for twitch IRC connection",
-	"targetChannel": "Twitch channel name",
-	"discordChannel": "discord channel ID that will be used to receive twitch chat messages"
+	"token": "",
+	"clientId": "",
+	"guildId": "",
+	"twitchUserToken": "",
+	"targetChannel": "",
+	"discordChannel": ""
 }
 ```
 
