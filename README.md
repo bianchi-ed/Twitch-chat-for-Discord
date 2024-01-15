@@ -30,7 +30,7 @@ Create a file named config.json on the root folder and populate with the followi
 ```
 
 **These are necessary for the discord.js application:**
-
+<br>
 
 [token](https://i.imgur.com/grBBTIy.png): You can obtain your bot token by navigating to the "Bot" tab in your Discord application settings. 
 
@@ -42,7 +42,7 @@ Create a file named config.json on the root folder and populate with the followi
 
 
 **These are necessary for the twitch.js application:**
-
+<br>
 
 [twitchUserToken](https://twitchapps.com/tmi/): Get your Twitch user token by logging in here. It should look like "oauth:xXxXXx."
 
