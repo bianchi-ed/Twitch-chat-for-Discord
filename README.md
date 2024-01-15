@@ -35,7 +35,7 @@ Create a file named config.json on the root folder and populate with the followi
 
 [targetChannel](https://i.imgur.com/UjIKXM1) -> Target twitch channel name
 
-[discordChannel](https://i.imgur.com/6fSVSN1.mp4) -> Discord channel ID that will receive the IRC twitch channel messages. 
+[discordChannel](https://i.imgur.com/6fSVSN1.mp4) -> Discord server channel ID. You can get this ID by right clicking your desired channel name and click "Copy Channel ID".
 
 ### 3. Run project
 
