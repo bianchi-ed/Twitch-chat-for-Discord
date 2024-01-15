@@ -1,6 +1,3 @@
-THIS IS A WORK IN PROGRESS
-
-
 ## How to use
 
 ### 1. Clone project and install modules
@@ -25,17 +22,17 @@ Create a file named config.json on the root folder and populate with the followi
 	"discordChannel": "discord channel ID that will be used to receive twitch chat messages"
 }
 ```
-[token](https://i.imgur.com/grBBTIy.png) -> You can get your bot token by entering the specific discord application and navigating to the "Bot" tab. 
+[token](https://i.imgur.com/grBBTIy.png): You can obtain your bot token by navigating to the "Bot" tab in your Discord application settings. 
 
-[clientId](https://i.imgur.com/u67WoGq.png) -> You can get your bot token by entering the specific discord application and navigating to the "General information" tab. 
+[clientId](https://i.imgur.com/u67WoGq.png): Find your Discord application ID in the "General Information" tab of your Discord application settings. 
 
-[guildId](https://i.imgur.com/qKGsMnX.mp4) -> Discord server ID. You can get this ID by right clicking your discord server name and click "Copy Server ID".
+[guildId](https://i.imgur.com/qKGsMnX.mp4): Copy your Discord server ID by right-clicking on your server name and selecting "Copy Server ID."
 
-[twitchUserToken](https://twitchapps.com/tmi/) -> Acess, log in and get your token. It looks like "oauth:xXxXXx"
+[twitchUserToken](https://twitchapps.com/tmi/): Get your Twitch user token by logging in here. It should look like "oauth:xXxXXx."
 
-[targetChannel](https://i.imgur.com/UjIKXM1) -> Target twitch channel name
+[targetChannel](https://i.imgur.com/UjIKXM1): Specify the target Twitch channel name.
 
-[discordChannel](https://i.imgur.com/6fSVSN1.mp4) -> Discord server channel ID. You can get this ID by right clicking your desired channel name and click "Copy Channel ID".
+[discordChannel](https://i.imgur.com/6fSVSN1.mp4): Provide the Discord server channel ID by right-clicking on your desired channel name and selecting "Copy Channel ID."
 
 ### 3. Run
 
