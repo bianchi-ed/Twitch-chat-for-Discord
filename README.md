@@ -57,7 +57,7 @@ Create a file named config.json on the root folder and populate with the followi
 $ node index.js
 ```
 
-If everything goes as expected you should be receiving the text from the twitch chat on target discord channel:
+If everything goes as expected you should be receiving messages from twitch's chat on target discord channel, as here:
 
 ![image](https://github.com/bianchi-ed/Twitch-chat-for-Discord/assets/134458207/04d5dd92-9a5f-4af3-960f-a395ca0b8a05)
 
