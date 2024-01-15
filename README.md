@@ -45,4 +45,4 @@ Create a file named config.json on the root folder and populate with the followi
 $ node index.js
 ```
 
-If everything is right, you should be receiving the text from the twitch chat on target discord channel as [in this example](https://i.imgur.com/Csunjv6.mp4)
+If everything goes as expected you should be receiving the text from the twitch chat on target discord channel as [in this example](https://i.imgur.com/Csunjv6.mp4)
