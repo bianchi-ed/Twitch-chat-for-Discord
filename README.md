@@ -63,8 +63,3 @@ If everything goes as expected you should be receiving messages from twitch's ch
 
 ![image](https://github.com/bianchi-ed/Twitch-chat-for-Discord/assets/134458207/04d5dd92-9a5f-4af3-960f-a395ca0b8a05)
 
-Also, the twitch chat messages will be printed on the terminal:
-
-![image](https://github.com/bianchi-ed/Twitch-chat-for-Discord/assets/134458207/fac5cf36-1a66-461f-87f1-4531a9fda57e)
-
-
